@@ -15,13 +15,9 @@ const displayGreetingswithEmoji = function(name,year){
     console.log(`😊 😊 Happy new year ${year} ${name} 😊 😊`)
 }
 
-var greet = {};
-
-if(age > 10){
-    greet = displayGreetings;
-}
-else{
-    greet = displayGreetingswithEmoji;
+const greet = function(name, year, func){
+    func(name, year);
 }
 
-greet('Sam', 2022);
+greet ('Sam', 2022, displayGreetingswithEmoji );
+greet ('Jane', 2022, displayGreetings );
